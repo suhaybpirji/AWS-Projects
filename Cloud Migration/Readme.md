@@ -9,3 +9,5 @@ The project's documentation is comprehensive, with the README file offering clea
 Resource management was a key focus, demonstrating proficiency in cloud migration strategies. The successful provisioning of a new EC2 instance highlighted effective resource utilization.
 
 To ensure adaptability for future use cases, adaptable scripts are provided in the "scripts" directory. Furthermore, a detailed_instructions.md file in the documentation folder offers in-depth insights into the project, contributing to its overall completeness.
+
+https://github.com/suhaybpirji/AWS-Projects/blob/main/Cloud%20Migration/Cloud%20Migration.png

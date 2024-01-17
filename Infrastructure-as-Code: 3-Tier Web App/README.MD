@@ -3,6 +3,7 @@ The 3-Tier Web App Infrastructure-as-Code project marked a significant departure
 The achievement in configuring the VPC and subnets was fundamental, creating a Virtual Private Cloud with distributed public and private subnets across multiple Availability Zones. Enabling DNS support and hostnames within the VPC ensured seamless communication among the deployed components.
 
 The implementation of EC2 instances and auto-scaling demonstrated the automation capability of the CloudFormation template. An Auto Scaling Group was configured to deploy EC2 instances dynamically across public subnets, and a Launch Configuration defined the instance type, AMI, and user data provisioning.
+![Iac](https://github.com/suhaybpirji/AWS-Projects/blob/main/Infrastructure-as-Code%3A%203-Tier%20Web%20App/content.png)
 
 
 The setup of the RDS database further enriched the project, establishing a MySQL RDS instance with Multi-AZ configuration to enhance availability. The accompanying security group configurations ensured controlled inbound traffic to the RDS instance.

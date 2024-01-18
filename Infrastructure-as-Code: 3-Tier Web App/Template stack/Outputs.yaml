@@ -1,0 +1,4 @@
+Outputs:
+  WebsiteURL:
+    Description: "URL for the website"
+    Value: !GetAtt MyLoadBalancer.DNSName

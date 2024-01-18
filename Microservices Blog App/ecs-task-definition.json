@@ -1,0 +1,52 @@
+{
+  "family": "blog-app-task",
+  "containerDefinitions": [
+    {
+      "name": "user-service",
+      "image": "123456789012.dkr.ecr.us-east-1.amazonaws.com/user-service:latest",
+      "cpu": 256,
+      "memory": 512,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 3000
+        }
+      ],
+      "environment": [
+        {
+          "name": "DB_HOST",
+          "value": "your-rds-endpoint"
+        },
+        {
+          "name": "DB_USER",
+          "value": "your-db-username"
+        },
+        {
+          "name": "DB_PASSWORD",
+          "value": "your-db-password"
+        }
+        // Add other environment variables as needed
+      ]
+    },
+    {
+      "name": "blog-service",
+      "image": "123456789012.dkr.ecr.us-east-1.amazonaws.com/blog-service:latest",
+      "cpu": 256,
+      "memory": 512,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 4000,
+          "hostPort": 4000
+        }
+      ],
+      "environment": [
+        // Environment variables for the blog service
+      ]
+    }
+    // Add more containers as needed
+  ],
+  "networkMode": "bridge",
+  // Other task definition settings such as volumes, placement constraints, etc.
+}

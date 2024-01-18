@@ -1,0 +1,26 @@
+  MyInstanceSecurityGroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      VpcId: !Ref MyVPC
+      GroupDescription: "Security group for EC2 instances"
+      SecurityGroupIngress:
+        - CidrIp: "0.0.0.0/0"
+          IpProtocol: "-1"
+
+  MyAutoScalingGroup:
+    Type: "AWS::AutoScaling::AutoScalingGroup"
+    Properties:
+      VPCZoneIdentifier:
+        - !Ref PrivateSubnet
+      LaunchConfigurationName: !Ref MyLaunchConfiguration
+      MinSize: "1"
+      MaxSize: "3"
+
+  MyLaunchConfiguration:
+    Type: "AWS::AutoScaling::LaunchConfiguration"
+    Properties:
+      ImageId: "ami-xxxxxxxxxxxxxxxxx"  # Specify your AMI ID
+      InstanceType: "t2.micro"
+      KeyName: !Ref KeyName
+      SecurityGroups:
+        - !Ref MyInstanceSecurityGroup

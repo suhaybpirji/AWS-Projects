@@ -1,0 +1,17 @@
+  MyDBSubnetGroup:
+    Type: "AWS::RDS::DBSubnetGroup"
+    Properties:
+      DBSubnetGroupDescription: "Subnet group for RDS"
+      SubnetIds:
+        - !Ref PrivateSubnet
+
+  MyRDSInstance:
+    Type: "AWS::RDS::DBInstance"
+    Properties:
+      AllocatedStorage: "20"
+      DBInstanceIdentifier: "MyRDSInstance"
+      Engine: "mysql"
+      MasterUsername: "admin"
+      MasterUserPassword: "adminpassword"
+      MultiAZ: true
+      DBSubnetGroupName: !Ref MyDBSubnetGroup

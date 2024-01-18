@@ -1,3 +1,5 @@
+###Infrastructure-as-Code: 3-Tier Web App
+
 The 3-Tier Web App Infrastructure-as-Code project marked a significant departure from traditional server provisioning methods by introducing a standardized template for efficient deployment using AWS CloudFormation. The primary goal was to create a YAML template that orchestrates the deployment of a three-tiered web application, consisting of a load balancer, auto-scaling EC2 instances, and a Multi-AZ configured Relational Database Service (RDS) instance.
 
 The achievement in configuring the VPC and subnets was fundamental, creating a Virtual Private Cloud with distributed public and private subnets across multiple Availability Zones. Enabling DNS support and hostnames within the VPC ensured seamless communication among the deployed components.

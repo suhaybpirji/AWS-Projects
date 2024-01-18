@@ -1,0 +1,9 @@
+  MyDNSRecordSet:
+    Type: "AWS::Route53::RecordSet"
+    Properties:
+      HostedZoneId: "YOUR_HOSTED_ZONE_ID"
+      Name: "example.com"
+      Type: "A"
+      AliasTarget:
+        HostedZoneId: !GetAtt MyLoadBalancer.CanonicalHostedZoneId
+        DNSName: !GetAtt MyLoadBalancer.DNSName
